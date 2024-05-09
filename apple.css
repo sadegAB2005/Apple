@@ -1,0 +1,793 @@
+/* Common styles */
+/* Link to Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 48px;
+    backdrop-filter: saturate(1.8) blur(20px);
+    background-color: rgba(250, 250, 252, 0.8);
+    z-index: 1000;
+}
+
+
+
+header .nav {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+}
+
+header .nav .logo {
+    margin-right: 12px;
+    font-size: 16px;
+    color: black;
+}
+
+header .nav ul {
+    list-style: none;
+}
+
+header .nav li {
+    display: inline-block;
+    margin: 16px;
+}
+
+header .nav li a {
+    color: black;
+}
+.nav .icon {
+    display: none;
+    color: rgb(138, 129, 129);
+    font-size: 20px;
+    margin: 15px 25px 0 0;
+  }
+
+.view {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.extras1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+    color: rgb(29, 29, 31);
+}
+.extras2{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+    color: #fff;
+}
+.extras1 .g-extras  h2 ,
+.extras2 .g-extras h2 {
+    font-size: 58px;
+    line-height: 1.07143;
+    font-weight: 600;
+    letter-spacing: -.005em;
+    white-space: nowrap;
+}
+
+.extras1 p,.extras2 .g-extras p {
+    font-size: 28px;
+    letter-spacing: -.005em;
+    margin-top: 5px;
+}
+
+.buttons {
+    margin: 30px;
+}
+
+.buttons a {
+    padding: 12px 24px;
+    border-radius: 40px;
+    margin: 12px;
+}
+
+.blue,
+.white:hover,
+.black:hover {
+    background-color: rgb(0, 113, 227);
+    color: #fff;
+}
+
+.white {
+    background-color: #fff;
+    color: rgb(0, 113, 227);
+    border: 1px solid rgb(0, 113, 227);
+}
+.black {
+    background-color:black;
+    color: rgb(0, 113, 227);
+    border: 1px solid rgb(0, 113, 227);
+}
+
+.img {
+    position: absolute;
+    top: 2.1%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: none;
+}
+.img img{
+    width: 3008px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 800px),(max-device-width: 1024px) {
+    header .nav .logo{
+        margin: 5px 0 0 20px;
+        font-size: 22px;
+    }
+    
+    .extras1 {
+        top: 19%;
+    }
+
+    .extras1 .g-extras h2,.extras2 .g-extras h2 {
+        font-size: 40px;
+    }
+    header{
+        justify-content: space-between;
+    }
+    .extras1 .g-extras p,.extras2 .g-extras p {
+        font-size: 18px;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+    }
+    .buttons a {
+        padding: 10px 20px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+
+
+}
+/* Add responsive styles */
+@media screen and (max-width: 800px) ,(max-device-width: 1024px){
+    .nav ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 1);
+    }
+  
+    .nav ul li {
+      display: block;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  
+    .nav .icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  
+    .nav.responsive .icon {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  
+    .nav.responsive ul {
+      display: block;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .img img{
+        width: 800px;
+        content: url(static/mac1\ small.jpg);
+
+}
+    .img {
+        top: 6%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    
+    .buttons {
+        margin: 10px;
+    }
+
+    .buttons a {
+        padding: 8px 20px;
+        border-radius: 40px;
+        margin: 6px;
+    }
+    .extras1 p {
+        font-size: 22px;
+        white-space: nowrap;
+    }
+    .extras1 h2 {
+        font-size: 38px;
+        font-weight: 550;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1080px) {
+  
+
+    .extras1 {
+        top: 18%;
+    }
+    
+    .buttons {
+        margin: 8px;
+    }
+    .buttons a {
+        padding: 10px 24px;
+        font-size: 14px;
+        white-space: nowrap;
+        margin: 6px;
+    }
+    .img {
+        top: -0.3%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3008px  ;
+    }
+}
+.grid{
+    margin: 10px;
+}
+.row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-container {
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+    height: 90vh;
+    margin: 7px;
+    position: relative;
+  }
+  .image-container img {
+    padding-top: 90px;
+    max-width: 100%;
+    height: auto;
+    transform: scale(1.86);
+    
+    }
+  .contain {
+    color: #fff;
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  .contain2top{
+    color: rgb(29, 29, 31);
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 24px;
+    white-space: nowrap;
+  }
+  .contain2top p{
+    font-size: 20px;
+  }
+  .image-container .buttonstop2 {
+    position: absolute;
+    z-index: 10; /* Add this line */
+    top: 29%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  .image-container .buttonstop2 {
+    margin: 30px;
+}
+
+.image-container .buttonstop2 a {
+    padding: 7px 15px 7px 15px;
+    border-radius: 40px;
+    font-size: 14px;
+    margin: 6px;
+}
+
+  .containtop{
+    color: #fff;
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  .containtop h1{
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 500;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  }
+  .containtop i{
+    font-size: 32px;
+  }
+  .containtop h2{
+    font-size: 42px;
+    font-weight: 600;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  }
+  .containtop h4{
+    font-weight: 500;
+  }
+  .containtop p{
+    font-size: 19px;
+  }
+
+  .image-container .buttons2 {
+    position: absolute;
+    z-index: 10; /* Add this line */
+    top: 34%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  .image-container .buttons2 {
+    margin: 30px;
+}
+
+.image-container .buttons2 a {
+    padding: 7px 15px 7px 15px;
+    border-radius: 40px;
+    font-size: 14px;
+    margin: 6px;
+}
+
+
+.rainbow-text {
+    background-image: linear-gradient(90deg, rgb(203, 19, 51), rgb(222, 69, 193), rgb(185, 107, 226), rgb(132, 169, 224), rgb(35, 212, 59), rgb(208, 187, 8), rgb(235, 109, 23));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+
+
+  .image-container .buttons {
+    position: absolute;
+    z-index: 10; /* Add this line */
+    top: 85%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  .image-container .buttons {
+    margin: 30px;
+}
+
+.image-container .buttons a {
+    padding: 7px 15px 7px 15px;
+    border-radius: 40px;
+    font-size: 14px;
+    margin: 6px;
+}
+.contain2 {
+    color: rgb(29, 29, 31);
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  .contain2 h1{
+    font-size: 36px;
+
+  }
+
+.containtop2{
+    color: #fff;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  .containtop2 h1{
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 600;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  }
+  .containtop2 .text-container h4 {
+    display: inline-block;
+    margin: 0;
+}
+  .containtop2 h4{
+    font-weight: 500;
+  }
+  .image-container .buttons2top {
+    position: absolute;
+    z-index: 10; /* Add this line */
+    top: 22%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  .image-container .buttons2top {
+    margin: 30px;
+}
+
+.image-container .buttons2top a {
+    padding: 7px 15px 7px 15px;
+    border-radius: 40px;
+    font-size: 14px;
+    margin: 6px;
+}
+
+  .slide_holder{
+    padding: 15px;
+  }
+  .slide_holder:focues{
+    outline: none;
+  }
+  .paragraph{
+    display: inline-flex;
+    text-shadow: 0.9px 0.9px 0.9px rgb(29, 29, 31);
+    color: #fff;
+    font-size: 18px;
+    }
+    .btn_stream{
+      margin-top: 16px;
+    }
+  .btn_stream a{
+    background-color:#fff;
+    border-radius: 32px;
+    margin: 20px;
+    padding: 12px 22px;
+    color: rgb(29, 29, 31);
+    font-size: 16px;
+    font-weight: 600;
+
+  }
+
+
+
+  .container{
+    max-width: 100%;
+    margin: auto;
+  }
+  .slide_inner{
+    min-height: 80vh;
+    position: relative;
+
+  }
+
+
+  .slide_holder.slide1 .slide_inner{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2),5%, rgba(0, 0, 0, 0)), url(static/1.jpg) center/cover no-repeat;
+  }
+  .slide_holder.slide2 .slide_inner{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2),5%, rgba(0, 0, 0, 0)), url(static/2.jpg) center/cover no-repeat;
+  }
+  .slide_holder.slide3 .slide_inner{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2),5%, rgba(0, 0, 0, 0)), url(static/3.jpg) center/cover no-repeat;
+  }
+  .slide_holder.slide4 .slide_inner{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2),5%, rgba(0, 0, 0, 0)), url(static/4.jpg) center/cover no-repeat;
+  }
+  .slide_holder.slide5 .slide_inner{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2),5%, rgba(0, 0, 0, 0)), url(static/5.jpg) center/cover no-repeat;
+  }
+  .slide_holder.slide6 .slide_inner{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2),5%, rgba(0, 0, 0, 0)), url(static/6.jpg) center/cover no-repeat;
+  }
+  .slide_holder.slide7 .slide_inner{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2),5%, rgba(0, 0, 0, 0)), url(static/7.jpg) center/cover no-repeat;
+  }
+  .slide_holder.slide8 .slide_inner{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2),5%, rgba(0, 0, 0, 0)), url(static/8.jpg) center/cover no-repeat;
+  }
+  .slide_holder.slide9 .slide_inner{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2),5%, rgba(0, 0, 0, 0)), url(static/9.jpg) center/cover no-repeat;
+
+  }
+
+
+  span.arrow {
+    display: block;
+    width: 165px;
+    height: 495px;
+    position: absolute;
+    background-color: transparent;
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0; /* Change the opacity value to 1 */
+    transition: .3s ease;
+  }
+  .slide_wrapper:hover span.arrow{
+    opacity: 0.5;
+  }
+  .slide_wrapper:hover span.arrow:hover{
+    opacity: 1;
+  }
+  span.arrow.next{
+    left: 0%;
+  }
+
+  span.arrow.prev{
+    right: 0%;
+  }
+  .slide_wrapper{
+    position: relative;
+  }
+  .slick-dots li button:before {
+    content: none;
+  }
+
+  .slick-dots li button {
+    background-color: rgba(0, 0, 0, 0.42);
+    transition: background-color 100ms linear;
+    border-radius: 50%;
+    width: 1px;
+    height: 1px;
+  }
+  .slick-dots li button:hover {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    transition: background-color 100ms linear;
+
+  }
+  
+  .slick-dots li.slick-active button {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 1px;
+    height: 1px;
+  }
+
+
+  /* Default style for slide content */
+.slide_content {
+  opacity: 0;
+  transition: all 2s ease-in-out; /* Adjust the transition duration as needed */
+  display: inline-flex;
+  max-width: 100%;
+  padding: 30px;
+  position: absolute;
+  left: 8%;
+  top: 80%;
+  
+}
+
+/* Active slide style */
+.slick-active .slide_content {
+  top: 75%;
+  opacity: 1;
+  transition: all 1.1s ease-in-out; /* Adjust the transition duration as needed */
+}
+.slide_inner{
+  opacity: 0.4;
+  transition: all 1.1s ease-in-out; /* Adjust the transition duration as needed */
+}
+.slick-active .slide_inner{
+  opacity: 1;
+  transition: all 1.1s ease-in-out;
+
+}
+
+
+
+/* Optionally, you can style the button */
+.button {
+  display: inline-flex;
+  margin-top: 10px; /* Adjust spacing */
+  padding: 6px 10px; /* Adjust padding */
+  background-color: rgb(210, 210, 215); /* Blue color */
+  border-radius: 40px;
+  color: rgb(29, 29, 31); /* Text color */
+  border: none; /* Remove border */
+  cursor: pointer; /* Add pointer cursor */
+  font-size: 13px;
+  float: right; /* Align to the right side */
+  margin: 10px;
+}
+.slider_bg {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.slider_bg img {
+  display: block;
+  height: auto;
+  z-index: 0;
+}
+.gradient_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95.7%;
+  height: 240px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.4) );
+  z-index: 1;
+  opacity: 0.1;
+  transition: opacity 0.6s ease; /* Adjust transition property here */
+}
+
+.slider_bg:hover .gradient_overlay {
+  opacity: 1; /* Adjust opacity value here */
+}
+.slider_bg1:hover .gradient_overlay {
+  opacity: 1; /* Adjust opacity value here */
+}
+
+
+.slider_bg h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0.3px 0.4px 0.3px rgb(29, 29, 31);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.slider_bg1{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.slider_bg1 img {
+  border-radius: 22px;
+  padding: 15px 8px 10px 13px;
+}
+.slider_bg1 .extL {
+  position: absolute;
+  display: inline-flex;
+  right: 30px;
+  bottom: 5px;
+
+}
+.slider_bg1 h3{
+  position: absolute;
+  top: 45%;
+  text-shadow: 0.3px 0.4px 0.3px rgb(29, 29, 31);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  
+}
+.slider_bg h3{
+  position: absolute;
+  margin-top: 88px;
+  left: 15%;
+  text-shadow: 0.3px 0.4px 0.3px rgb(29, 29, 31);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+
+  
+}
+.slider_bg1 .extL h2{
+  text-shadow: 0.3px 0.4px 0.3px rgb(29, 29, 31);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+.slider_bg1 .extL i{
+  margin: 4.8px;
+  color: #fff;
+}
+.background_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95.8%;
+  height: 240px;
+/* Replace with desired background color */
+  /* OR */
+  /* background-image: url('path/to/background-image.jpg'); */
+  /* Replace 'path/to/background-image.jpg' with the URL or path to your background image */
+  z-index: -1; /* Ensure it stays behind the image */
+}
+
+.slider_bg .extL {
+  position: absolute;
+  display: inline-flex;
+  right: 32px;
+  bottom: 15px;
+
+}
+.slider_bg .extL h2{
+  text-shadow: 0.3px 0.4px 0.3px rgb(29, 29, 31);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  
+}
+
+.slider_bg .extL i{
+  margin: 4.5px;
+  color: #fff;
+}
+
+
+.btn_hover {
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+  top: 56%;
+  left: 48%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+  z-index: 2;
+}
+
+.btn_hover a {
+  display: inline-block;
+  padding: 8px 18px;
+  background-color: #fff;
+  color: rgb(29, 29, 31);
+  border-radius: 40px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.slider_bg:hover a {
+  transform: translateY(-20px);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.slider_bg1:hover a {
+  transform: translateY(-20px);
+  opacity: 1;
+  transition: all 0.5s;
+}
